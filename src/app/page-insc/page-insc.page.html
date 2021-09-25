@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pageInsc</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content >
+  
+  <ion-card>
+    <ion-item>
+      <ion-label><h2>Name</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label><h2>User Name</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="userName"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      
+      <ion-list>
+        <ion-radio-group  [(ngModel)]="value_selected">
+          <ion-list-header>
+            <ion-label>
+              Position
+            </ion-label>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>client</ion-label>
+            <ion-radio value="client"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>propriétaire</ion-label>
+            <ion-radio value="propriétaire"></ion-radio>
+          </ion-item>
+
+        </ion-radio-group>
+      </ion-list>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label><h2>Email</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="email"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label><h2>Password</h2></ion-label>
+      <ion-input type="password"  [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-button (click)="register()"  expand="block"  color="success">Inscription</ion-button>
+  <!-- <ion-button (click)="getUser()"  expand="block"  color="success">Get_User</ion-button> -->
+
+  <ion-list>
+    <ion-item *ngFor= "let lv of liste">
+<ion-label>
+  <h3>{{lv.email}}</h3>
+  <h4>{{lv.name}}</h4>
+</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+

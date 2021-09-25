@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Proprietaire</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label><h2>Nom de la Salle</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="NomSalle"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label><h2>Addresse</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="addresse"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label><h2>Nombre de Place</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="PlaceNumber"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label><h2>Prix de Location</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="PrixLocation"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <input type="file" #id_f>
+    </ion-item>
+  </ion-card>
+  <div><ion-button (click)="ajouter()">Ajouter Salle</ion-button></div>
+
+
+</ion-content>
+

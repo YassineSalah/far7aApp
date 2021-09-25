@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home Page</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  
+
+
+<ion-card *ngFor="let hs of liste">
+
+  <ion-card-header>
+    <ion-card-subtitle> Salle Card </ion-card-subtitle>
+    <ion-card-title><h3> {{hs.nomSalle}}</h3></ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+  
+      <img [src]="hs.image | async " /> 
+    
+    <h3> Addresse: {{hs.adresse}}</h3>
+    <h3>Nombre de place: {{hs.nbrePlace}}</h3>
+    <h4>Prix: {{hs.prix}}</h4>
+  
+    <ion-button (click)="DeleteSalle(hs)" color="danger" >
+      <ion-icon name="trash-outline"></ion-icon>
+
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+
+  <div>
+  <ion-item><ion-button (click)="AllerPropri()">Ajouter Salle</ion-button></ion-item> 
+  </div>
+
+
+</ion-content> 
+
+
+
+
+
